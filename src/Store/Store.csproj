@@ -67,6 +67,9 @@
     <Compile Include="Routes.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Projects\AddReview.aspx" />
+    <Content Include="Views\Projects\Details.aspx" />
+    <Content Include="Views\Projects\List.aspx" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>

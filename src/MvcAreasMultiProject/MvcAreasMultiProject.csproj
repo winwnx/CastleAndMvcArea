@@ -61,8 +61,13 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Accounts\AccountsRoute.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Areas\Accounts\Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Areas\Projects\Controllers\ProjectsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -71,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Areas\Accounts\View\EditBilling.aspx" />
+    <Content Include="Areas\Accounts\View\EditShipping.aspx" />
+    <Content Include="Areas\Accounts\View\Index.aspx" />
+    <Content Include="Areas\Projects\View\AddReview.aspx" />
+    <Content Include="Areas\Projects\View\Details.aspx" />
+    <Content Include="Areas\Projects\View\List.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -97,16 +108,6 @@
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Accounts\Accounts.csproj">
-      <Project>{845C261B-FD52-4317-B1C0-AB8C4297CFD8}</Project>
-      <Name>Accounts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Store\Store.csproj">
-      <Project>{36430F73-EE61-4847-9503-B05E20E3DCEB}</Project>
-      <Name>Store</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
