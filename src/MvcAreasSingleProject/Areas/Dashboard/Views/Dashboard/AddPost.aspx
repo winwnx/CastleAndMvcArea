@@ -7,5 +7,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>AddPost</h2>
+    <hr />
+    <h3>This is :<%= ViewData["Name"] %></h3>
 <p><%= Html.ActionLink("Edit Post", "EditPost") %></p>
+<p><%= Html.ActionLink("Test", "Test") %></p>
 </asp:Content>

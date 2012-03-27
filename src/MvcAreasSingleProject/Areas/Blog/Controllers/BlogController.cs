@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcAreasSingleProject.Areas.Blog.Controllers
+namespace MvcAreasSingleProject.Areas.BlogA.Controllers.Big
 {
     public class BlogController : Controller
     {

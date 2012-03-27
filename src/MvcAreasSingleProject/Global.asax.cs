@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using MvcAreasSingleProject.Areas.Blog.Controllers;
+using MvcAreasSingleProject.Areas.Dashboard.Controllers;
 using MvcAreasSingleProject.Controllers;
 using MvcContrib.Castle;
 
@@ -38,18 +39,13 @@ namespace MvcAreasSingleProject
             foreach (var controller in
                 types.Where(t => typeof(IController).IsAssignableFrom(t)))
             {
-                if (typeof(BlogController).IsAssignableFrom(controller))
-                {
-                    container.Register(
-                        Component.For(controller).LifeStyle.Transient);
-                }
-                else
-                {
-                    container.Register(
+                container.Register(
                         Component.For(controller)
                             .LifeStyle.Transient);
-                }
             }
+
+            var dict = new Hashtable {{"name", "This is My Dashboard"}};
+            container.Kernel.RegisterCustomDependencies(typeof (DashboardController), dict);
 
             var cf = new WindsorControllerFactory(container);
             ControllerBuilder.Current.SetControllerFactory(cf);

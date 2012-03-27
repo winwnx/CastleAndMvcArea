@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcAreasSingleProject.Areas.Blog
+namespace MvcAreasSingleProject.Areas.BlogA
 {
     public class BlogRoutes : AreaRegistration 
     {
